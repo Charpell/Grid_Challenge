@@ -1,0 +1,16 @@
+const findConsecutiveIndex = arr => {
+  let firstIndex = 0;
+  let secondIndex = 1;
+  let thirdIndex = 2;
+  const result = []
+  
+  while (firstIndex < arr.length -2) {
+    if ((arr[firstIndex] - arr[secondIndex] === arr[secondIndex] - arr[thirdIndex])) {
+      result.push(firstIndex)
+    }
+      firstIndex++
+      secondIndex++
+      thirdIndex++
+  }
+  return result.length > 0 ? result : null
+}
